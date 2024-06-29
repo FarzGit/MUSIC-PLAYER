@@ -3,3 +3,13 @@
 @tailwind utilities;
 
 
+.portion-two{
+    background: rgb(58,2,2);
+background: linear-gradient(180deg, rgba(58,2,2,1) 26%, rgba(10,9,9,1) 90%);
+}
+
+.portion-three{
+    background: rgb(35,10,10);
+background: linear-gradient(180deg, rgba(35,10,10,1) 2%, rgba(10,9,9,1) 90%);
+    
+}
