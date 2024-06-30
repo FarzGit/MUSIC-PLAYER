@@ -3,13 +3,39 @@
 @tailwind utilities;
 
 
-.portion-two{
-    background: rgb(58,2,2);
-background: linear-gradient(180deg, rgba(58,2,2,1) 26%, rgba(10,9,9,1) 90%);
+.portion-two  {
+    background: rgb(58, 2, 2);
+    background: linear-gradient(180deg, rgba(58, 2, 2, 1) 26%, rgba(10, 9, 9, 1) 90%);
 }
 
-.portion-three{
-    background: rgb(35,10,10);
-background: linear-gradient(180deg, rgba(35,10,10,1) 2%, rgba(10,9,9,1) 90%);
-    
+.portion-three {
+    background: rgb(35, 10, 10);
+    background: linear-gradient(180deg, rgba(35, 10, 10, 1) 2%, rgba(10, 9, 9, 1) 90%);
+
 }
+
+.offcanvas {
+    background: rgb(35, 10, 10);
+    background: linear-gradient(180deg, rgba(35, 10, 10, 1) 2%, rgba(10, 9, 9, 1) 90%);
+
+}
+
+.cardBanner{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(144,143,143,1) 0%, rgba(73,71,71,1) 0%, rgba(51,48,48,1) 0%, rgba(31,28,28,1) 75%);
+}
+
+.tablediv{
+
+    max-height: 33%;
+
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+    display: none; 
+  }
+  .tableHead{
+    background: rgb(30,6,6);
+    background: linear-gradient(180deg, rgba(30,6,6,1) 0%, rgba(23,7,7,1) 75%);
+
+  }
