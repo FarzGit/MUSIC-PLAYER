@@ -2,7 +2,7 @@ import { MdVerified } from "react-icons/md";
 
 
 
-const Banner = () => {
+const Banner = () => { // this is banner component
   return ( 
     <div className=" h-1/2 flex justify-center items-center">
     <div className="relative w-[85%] h-[270px] rounded-3xl cardBanner flex justify-between">

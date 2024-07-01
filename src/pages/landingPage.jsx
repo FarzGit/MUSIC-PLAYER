@@ -48,13 +48,13 @@ const LandingPage = () => {
   }, [currentSongIndex, isPlaying]);
 
   const updateSeek = () => {
-    if (soundRef.current && soundRef.current.playing()) {
+    if (soundRef.current && soundRef.current.playing()) { // this for updating the seek when a music changed 
       setSeek(soundRef.current.seek());
       requestAnimationFrame(updateSeek);
     }
   };
 
-  const handleRowClick = (song, index) => {
+  const handleRowClick = (song, index) => { // this is the function for handle the music selections
     if (currentSongIndex === index) {
       togglePlayPause();
     } else {
@@ -63,17 +63,17 @@ const LandingPage = () => {
     }
   };
 
-  const handlePrevious = () => {
+  const handlePrevious = () => { // this is for handle the previous button 
     const prevIndex = currentSongIndex === 0 ? musicData.length - 1 : currentSongIndex - 1;
     setCurrentSongIndex(prevIndex);
   };
 
-  const handleNext = () => {
+  const handleNext = () => { // this is for handling the next button of the music player
     const nextIndex = currentSongIndex === musicData.length - 1 ? 0 : currentSongIndex + 1;
     setCurrentSongIndex(nextIndex);
   };
 
-  const togglePlayPause = () => {
+  const togglePlayPause = () => { // this is for puase and play the musics while playing or not
     if (isPlaying) {
       soundRef.current.pause();
     } else {
@@ -82,7 +82,7 @@ const LandingPage = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const handleSeek = (e) => {
+  const handleSeek = (e) => { // this is for handle the seek while playing the musics
     const newSeek = parseFloat(e.target.value);
     setSeek(newSeek);
     if (soundRef.current) {
