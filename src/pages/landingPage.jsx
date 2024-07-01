@@ -5,6 +5,9 @@ import { Howl } from 'howler';
 import { useState, useEffect, useRef } from "react";
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import { TouchBackend } from 'react-dnd-touch-backend';
+import { isMobile } from 'react-device-detect';
+
 
 const initialMusicData = [
   { image: '/alan.png', title: 'Who I Am', playing: '10.222.333', time: '2:07', album: 'Alan Walker', src: "/musics/Alan Walker,Who I Am.mp3" },
@@ -100,7 +103,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
       <div className="flex">
         <PortionOne />
         <PortionTwo
