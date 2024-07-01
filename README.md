@@ -25,7 +25,7 @@ To clone and run this project, you'll need Git and Node.js (which comes with npm
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/yourusername/music-player.git
+$ git clone https://github.com/FarzGit/MUSIC-PLAYER.git
 
 # Go into the repository
 $ cd music-player
