@@ -23,7 +23,7 @@ const MusicTable = ({ data, onRowClick, currentSongIndex }) => {
         </thead>
         <tbody className="  ">
           {data.map((item, index) => (
-            <tr key={index} onClick={() => onRowClick(item, index)} className={index === currentSongIndex ? 'bg-[#3A0202] text-white' : 'cursor-pointer '}>
+            <tr key={index} onClick={() => onRowClick(item, index)} className={index === currentSongIndex ? 'bg-[#3A0202] text-white cursor-pointer' : 'cursor-pointer '}>
                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">
                {index === currentSongIndex ? (
                     <BiSolidMusic className="mr-2 text-white" size={25} /> 
