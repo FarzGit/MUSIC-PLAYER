@@ -1,27 +1,31 @@
-import PortionOne from "../components/LandingPages/portionOne"
-import PortionThree from "../components/LandingPages/portionThree"
-import PortionTwo from "../components/LandingPages/portionTwo"
+import PortionOne from "../components/LandingPages/portionOne";
+import PortionThree from "../components/LandingPages/portionThree";
+import PortionTwo from "../components/LandingPages/portionTwo";
 import { Howl } from 'howler';
 import { useState, useEffect, useRef } from "react";
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
-
-const musicData = [
-  { image: '../../../public/alan.png', title: 'Song 1', playing: '10.222.333', time: '3:45', album: 'Album 1', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
-  { image: '../../../public/alan.png', title: 'Song 2', playing: '10.222.333', time: '4:20', album: 'Album 2', src: "/src/assets/musics/Alan Walker,Barcelona.mp3" },
-  { image: '../../../public/alan.png', title: 'Song 3', playing: '10.222.333', time: '5:10', album: 'Album 3', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
-  { image: '../../../public/alan.png', title: 'Song 1', playing: '10.222.333', time: '3:45', album: 'Album 1', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
-  { image: '../../../public/alan.png', title: 'Song 2', playing: '10.222.333', time: '4:20', album: 'Album 2', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
-
+const initialMusicData = [
+  { image: '/alan.png', title: 'Who I Am', playing: '10.222.333', time: '2:07', album: 'Alan Walker', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'Barcelona', playing: '10.222.333', time: '3:44', album: 'Album 2', src: "/src/assets/musics/Alan Walker,Barcelona.mp3" },
+  { image: '/alan-yellaback.jpg', title: 'SAlan Walker - Faded', playing: '10.222.333', time: '3:32', album: 'Album 3', src: "/src/assets/musics/Alan Walker - Faded.mp3" },
+  { image: '/alan.png', title: 'Faded-Remix', playing: '10.222.333', time: '5:04', album: 'Album 1', src: "/src/assets/musics/Y2meta.app - Alan Walker - Faded (Remix by Julio Mortal Mix) (320 kbps).mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'For Those Who Dare', playing: '10.222.333', time: '1:34', album: 'Album 2', src: "/src/assets/musics/For Those Who Dare.mp3" },
+  { image: '/alan.png', title: 'Who I Am', playing: '10.222.333', time: '2:07', album: 'Alan Walker', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'Barcelona', playing: '10.222.333', time: '3:44', album: 'Album 2', src: "/src/assets/musics/Alan Walker,Barcelona.mp3" },
+  { image: '/alan-yellaback.jpg', title: 'SAlan Walker - Faded', playing: '10.222.333', time: '3:32', album: 'Album 3', src: "/src/assets/musics/Alan Walker - Faded.mp3" },
+  { image: '/alan.png', title: 'Faded-Remix', playing: '10.222.333', time: '5:04', album: 'Album 1', src: "/src/assets/musics/Y2meta.app - Alan Walker - Faded (Remix by Julio Mortal Mix) (320 kbps).mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'For Those Who Dare', playing: '10.222.333', time: '1:34', album: 'Album 2', src: "/src/assets/musics/For Those Who Dare.mp3" },
 ];
 
 const LandingPage = () => {
-
+  const [musicData, setMusicData] = useState(initialMusicData);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [seek, setSeek] = useState(0);
   const soundRef = useRef(null);
-  
 
   useEffect(() => {
     if (soundRef.current) {
@@ -94,12 +98,17 @@ const LandingPage = () => {
       }
     };
   }, []);
-  return (
-    <>
 
+  return (
+    <DndProvider backend={HTML5Backend}>
       <div className="flex">
         <PortionOne />
-        <PortionTwo data={musicData} onRowClick={handleRowClick} currentSongIndex={currentSongIndex} />
+        <PortionTwo
+          data={musicData}
+          onRowClick={handleRowClick}
+          currentSongIndex={currentSongIndex}
+          setMusicData={setMusicData}
+        />
         <PortionThree
           currentSong={musicData[currentSongIndex]}
           onPrevious={handlePrevious}
@@ -108,11 +117,11 @@ const LandingPage = () => {
           togglePlayPause={togglePlayPause}
           duration={duration}
           seek={seek}
-          handleSeek={handleSeek} />
+          handleSeek={handleSeek}
+        />
       </div>
+    </DndProvider>
+  );
+};
 
-    </>
-  )
-}
-
-export default LandingPage
+export default LandingPage;

@@ -38,7 +38,7 @@ const NavBar = () => {
 
             {/* Off-canvas sidebar */}
             <div
-                className={`fixed top-0 left-0 w-64 h-full offcanvas transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed top-0 left-0 w-64 z-40 h-full offcanvas transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
                     } transition-transform duration-300 ease-in-out md:hidden`}
             >
                 <button onClick={toggleSidebar} className="text-white p-4">
