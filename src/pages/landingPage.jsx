@@ -7,16 +7,16 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
 const initialMusicData = [
-  { image: '/alan.png', title: 'Who I Am', playing: '10.222.333', time: '2:07', album: 'Alan Walker', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
-  { image: '/alan-walker-mask1.jpg', title: 'Barcelona', playing: '10.222.333', time: '3:44', album: 'Album 2', src: "/src/assets/musics/Alan Walker,Barcelona.mp3" },
-  { image: '/alan-yellaback.jpg', title: 'SAlan Walker - Faded', playing: '10.222.333', time: '3:32', album: 'Album 3', src: "/src/assets/musics/Alan Walker - Faded.mp3" },
-  { image: '/alan.png', title: 'Faded-Remix', playing: '10.222.333', time: '5:04', album: 'Album 1', src: "/src/assets/musics/Y2meta.app - Alan Walker - Faded (Remix by Julio Mortal Mix) (320 kbps).mp3" },
-  { image: '/alan-walker-mask1.jpg', title: 'For Those Who Dare', playing: '10.222.333', time: '1:34', album: 'Album 2', src: "/src/assets/musics/For Those Who Dare.mp3" },
-  { image: '/alan.png', title: 'Who I Am', playing: '10.222.333', time: '2:07', album: 'Alan Walker', src: "/src/assets/musics/Alan Walker,Who I Am.mp3" },
-  { image: '/alan-walker-mask1.jpg', title: 'Barcelona', playing: '10.222.333', time: '3:44', album: 'Album 2', src: "/src/assets/musics/Alan Walker,Barcelona.mp3" },
-  { image: '/alan-yellaback.jpg', title: 'SAlan Walker - Faded', playing: '10.222.333', time: '3:32', album: 'Album 3', src: "/src/assets/musics/Alan Walker - Faded.mp3" },
-  { image: '/alan.png', title: 'Faded-Remix', playing: '10.222.333', time: '5:04', album: 'Album 1', src: "/src/assets/musics/Y2meta.app - Alan Walker - Faded (Remix by Julio Mortal Mix) (320 kbps).mp3" },
-  { image: '/alan-walker-mask1.jpg', title: 'For Those Who Dare', playing: '10.222.333', time: '1:34', album: 'Album 2', src: "/src/assets/musics/For Those Who Dare.mp3" },
+  { image: '/alan.png', title: 'Who I Am', playing: '10.222.333', time: '2:07', album: 'Alan Walker', src: "/musics/Alan Walker,Who I Am.mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'Barcelona', playing: '10.222.333', time: '3:44', album: 'Album 2', src: "/musics/Alan Walker,Barcelona.mp3" },
+  { image: '/alan-yellaback.jpg', title: 'SAlan Walker - Faded', playing: '10.222.333', time: '3:32', album: 'Album 3', src: "/musics/Alan Walker - Faded.mp3" },
+  { image: '/alan.png', title: 'Faded-Remix', playing: '10.222.333', time: '5:04', album: 'Album 1', src: "/musics/Y2meta.app - Alan Walker - Faded (Remix by Julio Mortal Mix) (320 kbps).mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'For Those Who Dare', playing: '10.222.333', time: '1:34', album: 'Album 2', src: "/musics/For Those Who Dare.mp3" },
+  { image: '/alan.png', title: 'Who I Am', playing: '10.222.333', time: '2:07', album: 'Alan Walker', src: "/musics/Alan Walker,Who I Am.mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'Barcelona', playing: '10.222.333', time: '3:44', album: 'Album 2', src: "/musics/Alan Walker,Barcelona.mp3" },
+  { image: '/alan-yellaback.jpg', title: 'SAlan Walker - Faded', playing: '10.222.333', time: '3:32', album: 'Album 3', src: "/musics/Alan Walker - Faded.mp3" },
+  { image: '/alan.png', title: 'Faded-Remix', playing: '10.222.333', time: '5:04', album: 'Album 1', src: "/musics/Y2meta.app - Alan Walker - Faded (Remix by Julio Mortal Mix) (320 kbps).mp3" },
+  { image: '/alan-walker-mask1.jpg', title: 'For Those Who Dare', playing: '10.222.333', time: '1:34', album: 'Album 2', src: "/musics/For Those Who Dare.mp3" },
 ];
 
 const LandingPage = () => {
